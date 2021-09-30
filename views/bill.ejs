@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <figure>
+                <figcaption>
+                    <h2>RECEIPT <a href="/allorders">View all orders <i class="far fa-eye"></i></a></h2>
+                </figcaption>
+            </figure>
+            <!-- ReceiptBox -->
+            <table id="receiptTable" class="border paddingSm">
+                <tr>
+                    <th></th>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td>Name</td>
+                    <td>
+                        <%= name %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>
+                        <%= address %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td>
+                        <%= city %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Province</td>
+                    <td>
+                        <%= province %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>PostCode</td>
+                    <td>
+                        <%= postCode %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>PhoneNumber</td>
+                    <td>
+                        <%= phoneNumber %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>
+                        <%= email %>
+                    </td>
+                </tr>
+                <tr id="itemList">
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Total Price</th>
+                </tr>
+
+                <tr>
+                    <td>Burger</td>
+                    <td>
+                        <%= qtyBurger %>
+                    </td>
+                    <td>
+                        <%= unitPriceBurger %>
+                    </td>
+                    <td>
+                        <%= unitPriceBurger * qtyBurger %>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Coffee</td>
+                    <td>
+                        <%= qtyCoffee %>
+                    </td>
+                    <td>
+                        <%= unitPriceCoffee %>
+                    </td>
+                    <td>
+                        <%= unitPriceCoffee * qtyCoffee %>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+
+                    </td>
+                    <td>
+                        Total
+                    </td>
+                    <td>
+                        <%= total.toFixed(2) %>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+
+                    </td>
+                    <td>
+                        SalesTax @ 5%
+                    </td>
+                    <td>
+                        <%= salesTax.toFixed(2) %>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+
+                    </td>
+                    <td>
+                        GrandTotal
+                    </td>
+                    <td>
+                        <%= grandTotal.toFixed(2) %>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

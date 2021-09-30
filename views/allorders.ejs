@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section>
+        <figure>
+            <figcaption>
+                <h2>FOOD STORE ORDERS <a href="/">Place order</a></h2>
+            </figcaption>
+        </figure>
+        <table id="orderTable" class="border paddingSm">
+            <thead>
+                <tr id="itemList">
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Province</th>
+                    <th>Postcode</th>
+                    <th>PhoneNumber</th>
+                    <th>Email</th>
+                    <th>Total Amount</th>
+                    <th>SalesTax</th>
+                    <th>GrandTotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%
+                    for(var order of orders){
+                        %>
+                    <tr>
+                        <td>
+                            <%= order.name %>
+                        </td>
+                        <td>
+                            <%= order.address %>
+                        </td>
+                        <td>
+                            <%= order.city %>
+                        </td>
+                        <td>
+                            <%= order.province %>
+                        </td>
+                        <td>
+                            <%= order.postCode %>
+                        </td>
+                        <td>
+                            <%= order.phoneNumber %>
+                        </td>
+                        <td>
+                            <%= order.email %>
+                        </td>
+                        <td>
+                            $
+                            <%= order.total %>
+                        </td>
+                        <td>$
+                            <%= order.salesTax.toFixed(2) %>
+                        </td>
+                        <td>$
+                            <%= order.grandTotal.toFixed(2) %>
+                        </td>
+                    </tr>
+                    <%
+                    }
+                %>
+            </tbody>
+        </table>
+    </section>
+</body>
+
+</html>

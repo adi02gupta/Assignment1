@@ -1,0 +1,23 @@
+{
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "ejs": "*",
+        "express": "^4.17.1",
+        "express-validator": "^6.12.1",
+        "mongoose": "*"
+    },
+    "name": "foodstore",
+    "version": "1.0.0",
+    "description": "online food order store",
+    "main": "index.js",
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "coffee",
+        "burger"
+    ],
+    "author": "aditya gupta",
+    "license": "ISC"
+}

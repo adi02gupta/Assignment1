@@ -1,0 +1,185 @@
+<%
+  var fullName = '';
+  var address = '';
+  var city = '';
+  var province = '';
+  var postCode = '';
+  var phoneNumber = '';
+  var email = '';
+  var qtyBurger='';
+  var qtyCoffee = '';
+  var minPurchase = '';
+
+  var fullNameError = '';
+  var addressError = '';
+  var cityError = '';
+  var provinceError = '';
+  var postCodeError = '';
+  var phoneNumberError = '';
+  var emailError = ''
+  var qtyBurgerError='';
+  var qtyCoffeeError = '';
+  var minPurchaseError = '';
+
+
+  if(typeof(er) != 'undefined')
+  {
+    for(var error of er)
+    { 
+      switch(error.param){
+        case 'fullName':         
+                                  fullNameError = error.msg;
+                                  break;
+        case 'address':           
+                                  addressError = error.msg;
+                                  break;
+        case 'city':              
+                                  cityError = error.msg;
+                                  break;
+        case 'province':          
+                                  provinceError = error.msg;
+                                  break;
+        case 'postCode':          
+                                  postCodeError = error.msg;
+                                  break;
+        case 'phoneNumber':       
+                                  phoneNumberError = error.msg;
+                                  break;
+        case 'email':             
+                                  emailError = error.msg;
+                                  break;
+        case 'qtyBurger':             
+                                  qtyBurgerError = error.msg;
+                                  break;
+        case 'qtyCoffee':             
+                                  qtyCoffeeError = error.msg;
+                                  break;
+        case 'minPurchase':             
+                                  minPurchaseError = error.msg;
+                                  break;
+      }
+    }
+  }
+%>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Food store</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <main>
+            <div class="alignCentre">
+                <figure>
+                    <figcaption>
+                        <h2>FOOD STORE <a href="/allorders">View all orders <i class="far fa-eye"></i></a></h2>
+                    </figcaption>
+                </figure>
+                <!-- Shopping form -->
+                <form action="order" method="POST">
+                    <h2>Customer Information</h2>
+                    <!-- Form fields -->
+                    <div class="fieldwrapper">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" name="fullName" placeholder="First Last" value="<%= fullName %>"><br>
+                        <p class="errorMessage">
+                            <%= fullNameError %>
+                        </p>
+                    </div>
+
+                    <div class="fieldwrapper">
+                        <label for="address">Address</label>
+                        <input type="text" name="address" placeholder="Address" value="<%= address %>"><br>
+                        <p class="errorMessage">
+                            <%= addressError %>
+                        </p>
+                    </div>
+
+                    <div class="fieldwrapper">
+                        <label for="city">City</label>
+                        <input type="text" name="city" placeholder="City" value="<%= city %>"><br>
+                        <p class="errorMessage">
+                            <%= cityError %>
+                        </p>
+                    </div>
+
+                    <div class="fieldwrapper">
+                        <label for="province">Province</label>
+                        <select name="province">
+                            <option value="">Select Province</option>
+                            <option value="Ontario">Ontario</option>
+                            <option value="British Columbia">British Columbia</option>
+                          </select>
+                        <p class="errorMessage">
+                            <%= provinceError %>
+                        </p>
+                    </div>
+
+                    <div class="fieldwrapper">
+                        <label for="postCode">Post Code</label>
+                        <input type="text" name="postCode" placeholder="N2N 2Y6" value="<%= postCode %>"><br>
+                        <p class="errorMessage">
+                            <%= postCodeError %>
+                        </p>
+                    </div>
+
+                    <div class="fieldwrapper">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="text" name="phoneNumber" placeholder="5198201234" value="<%= phoneNumber %>"><br>
+                        <p class="errorMessage">
+                            <%= phoneNumberError %>
+                        </p>
+                    </div>
+
+                    <div class="fieldwrapper">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" placeholder="agupta6586@conestogac.on.ca" value="<%= email %>"><br>
+                        <p class="errorMessage">
+                            <%= emailError %>
+                        </p>
+                    </div>
+
+                    <h2>Products</h2>
+                    <!-- Products -->
+
+                    <div class="fieldwrapper">
+                        <label for="coffee">Coffee($<span id='coffeePrice'>8.00</span>)</label>
+                        <input type="text" name="qtyCoffee" placeholder="Enter number of Coffee" value="<%= qtyCoffee %>"><br>
+                        <p class="errorMessage">
+                            <%= qtyCoffeeError %>
+                        </p>
+                    </div>
+                    <div class="fieldwrapper">
+                        <label for="burger">Burger($<span id='burgerPrice'>3.50</span>)</label>
+                        <input type="text" name="qtyBurger" placeholder="Enter number of Burger" value="<% qtyBurger %>"><br>
+                        <p class="errorMessage">
+                            <%= qtyBurgerError %>
+                        </p>
+                    </div>
+                    <div class="fieldwrapper">
+                        <p class="errorMinPurchase">
+                            <%= minPurchaseError %>
+                        </p>
+                    </div>
+                    <div class="checkoutBtn">
+                        <div class="help">
+                            <p id="minQtyError"></p>
+                        </div>
+                        <input type="submit" id="checkoutBtn" value="GO TO CHECKOUT"></input>
+                        <div class="help">
+                            <p>Need help? Call free 01234 567 890</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+        </main>
+    </body>
+
+    </html>
