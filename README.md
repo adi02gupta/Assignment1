@@ -56,3 +56,5 @@ You can clone or download the project. Once you have the project on you local ma
 
 Licensed under the [MIT License](LICENSE). 
 
+Licensed under the [MIT License](LICENSE). 
+
