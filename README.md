@@ -50,3 +50,9 @@ You can clone or download the project. Once you have the project on you local ma
 2. Run command npm install.
 3. Run command node index.js.
 4. Open browser and the project runs on http://localhost:8080.
+
+## License and copyright
+© ADITYA GUPTA, Conestoga College
+
+Licensed under the [MIT License](LICENSE). 
+
