@@ -5,7 +5,7 @@ const path = require('path');
 
 // setup the db connection
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/foodstore', {
+mongoose.connect('mongodb+srv://adgupta:adminadmin@cluster0.swkj5.mongodb.net/foodstore?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
